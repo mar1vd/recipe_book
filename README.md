@@ -1,59 +1,78 @@
-# RecipeBook
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.7.
+# 🍳 Recipe Book / Книга рецептів
 
-## Development server
+A simple application for managing recipes.  
+Простий додаток для керування рецептами.
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+## 🎯 Purpose / Мета
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+**English:**  
+The Recipe Book allows users to:
+- Browse recipes by category or search by name.  
+- View detailed recipe instructions with ingredients and steps.  
+- Add new recipes.  
+- Edit existing recipes.  
+- Delete recipes.  
+- Organize recipes by categories (e.g., Breakfast, Lunch, Dinner, Desserts).  
+- Optionally, mark favorite recipes.
 
-## Code scaffolding
+**Українська:**  
+Книга рецептів дозволяє користувачам:
+- Переглядати рецепти за категоріями або шукати за назвою.  
+- Переглядати детальні інструкції з інгредієнтами та кроками приготування.  
+- Додавати нові рецепти.  
+- Редагувати існуючі рецепти.  
+- Видаляти рецепти.  
+- Організовувати рецепти за категоріями (Сніданок, Обід, Вечеря, Десерти).  
+- За бажанням позначати улюблені рецепти.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
 
-```bash
-ng generate component component-name
-```
+## 📝 Features / Функціонал
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+**English:**
+- Recipe list with search and filtering.  
+- Recipe detail view.  
+- Add, edit, delete recipes.  
+- Categorization of recipes.  
+- Optional favorites list.
 
-```bash
-ng generate --help
-```
+**Українська:**
+- Список рецептів з пошуком та фільтром.  
+- Детальний перегляд рецепту.  
+- Додавання, редагування та видалення рецептів.  
+- Категоризація рецептів.  
+- Можливість позначати улюблені рецепти.
 
-## Building
+---
 
-To build the project run:
+## 💡 Future Ideas / Майбутні ідеї
 
-```bash
-ng build
-```
+**English:**
+- Rate and review recipes.  
+- Share recipes with others.  
+- Add images for recipes.  
+- Meal planning and shopping list generation.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+**Українська:**
+- Оцінювання та коментування рецептів.  
+- Можливість ділитися рецептами з іншими.  
+- Додавання зображень до рецептів.  
+- Планування страв та створення списків покупок.
 
-## Running unit tests
+---
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## 👨‍💻 Authors / Автори
 
-```bash
-ng test
-```
+**Developed by / Розробили:**  
+- **Ivan Tymchuk**  
+- **Denys Morys**
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
+✨ *Project created as part of the Front-End Web Programming (Angular) course.*  
+✨ *Проєкт створено в межах дисципліни "Веб-програмування Front-End (Angular)".*
 
-```bash
-ng e2e
-```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
