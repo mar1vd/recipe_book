@@ -1,0 +1,81 @@
+[
+  {
+    "id": 1,
+    "title": "Spaghetti Bolognese",
+    "category": "Dinner",
+    "ingredients": ["Spaghetti", "Tomato Sauce", "Minced Meat"],
+    "steps": ["Boil spaghetti", "Cook meat", "Add sauce"],
+    "favorite": false
+  },
+  {
+    "id": 2,
+    "title": "Pancakes",
+    "category": "Breakfast",
+    "ingredients": ["Flour", "Milk", "Eggs"],
+    "steps": ["Mix ingredients", "Fry in pan"],
+    "favorite": true
+  },
+  {
+    "id": 1,
+    "title": "Spaghetti Bolognese",
+    "category": "Dinner",
+    "ingredients": [
+      "Spaghetti - 200g",
+      "Ground beef - 300g",
+      "Tomato sauce - 250ml",
+      "Onion - 1 pc",
+      "Garlic - 2 cloves",
+      "Olive oil - 2 tbsp",
+      "Salt and pepper - to taste"
+    ],
+    "steps": [
+      "Boil the spaghetti according to the package instructions.",
+      "In a pan, heat olive oil and sauté chopped onion and garlic.",
+      "Add ground beef and cook until browned.",
+      "Pour in tomato sauce, season with salt and pepper, and simmer for 15 minutes.",
+      "Serve the sauce over spaghetti."
+    ],
+    "favorite": false
+  },
+  {
+    "id": 2,
+    "title": "Chicken Salad",
+    "category": "Lunch",
+    "ingredients": [
+      "Chicken breast - 200g",
+      "Lettuce - 1 bunch",
+      "Cucumber - 1 pc",
+      "Tomatoes - 2 pcs",
+      "Olive oil - 2 tbsp",
+      "Lemon juice - 1 tbsp",
+      "Salt and pepper - to taste"
+    ],
+    "steps": [
+      "Cook the chicken breast and cut it into cubes.",
+      "Chop the vegetables and mix them in a bowl.",
+      "Add the chicken, olive oil, and lemon juice.",
+      "Mix well and season to taste."
+    ],
+    "favorite": true
+  },
+  {
+    "id": 3,
+    "title": "Pancakes",
+    "category": "Breakfast",
+    "ingredients": [
+      "Flour - 200g",
+      "Milk - 250ml",
+      "Egg - 1 pc",
+      "Sugar - 2 tbsp",
+      "Salt - pinch",
+      "Butter - for frying"
+    ],
+    "steps": [
+      "Whisk together flour, milk, egg, sugar, and salt.",
+      "Heat a frying pan and melt some butter.",
+      "Pour a ladle of batter and cook until golden on both sides.",
+      "Serve with honey or jam."
+    ],
+    "favorite": false
+  }
+]
