@@ -1,22 +1,22 @@
-<div *ngIf="recipe; else notFound">
-  <h2>{{ recipe.title }}</h2>
+<div *ngIf="recipe; else notFound" class="detail">
+  <h2>{{ recipe.name }}</h2>
   <p><strong>Category:</strong> {{ recipe.category }}</p>
 
-  <h3>Ingredients:</h3>
+  <h3>Ingredients</h3>
   <ul>
-    <li *ngFor="let ingredient of recipe.ingredients">
-      {{ ingredient }}
+    <li *ngFor="let ing of recipe.ingredients">
+      {{ ing.name }}<span *ngIf="ing.amount"> — {{ ing.amount }}</span>
     </li>
   </ul>
 
-  <h3>Steps:</h3>
+  <h3>Steps</h3>
   <ol>
-    <li *ngFor="let step of recipe.steps">
-      {{ step }}
-    </li>
+    <li *ngFor="let step of recipe.steps">{{ step }}</li>
   </ol>
+
+  <p *ngIf="recipe.isFavorite" class="fav">⭐ This is one of your favorites!</p>
 </div>
 
 <ng-template #notFound>
-  <p>Recipe not found.</p>
+  <p>Рецепт не знайдено 😔</p>
 </ng-template>

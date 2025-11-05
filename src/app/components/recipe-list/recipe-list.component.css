@@ -1,0 +1,6 @@
+.list { display: grid; gap: 12px; }
+.recipe-card { border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px; }
+.header { display: flex; align-items: center; justify-content: space-between; }
+.cat { font-size: 12px; padding: 2px 8px; border-radius: 9999px; background: #f3f4f6; }
+.meta { margin: 6px 0; color: #6b7280; }
+.actions { display: flex; gap: 8px; }

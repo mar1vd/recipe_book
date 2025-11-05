@@ -1,0 +1,25 @@
+.detail {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  background: #fff;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h2 {
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+h3 {
+  margin-top: 16px;
+  margin-bottom: 8px;
+  color: #1f2937;
+}
+
+.fav {
+  margin-top: 12px;
+  color: #ef4444;
+  font-weight: bold;
+}

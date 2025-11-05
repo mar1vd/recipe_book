@@ -1,9 +1,28 @@
-<h2>Recipe List</h2>
-<ul>
-  <li *ngFor="let recipe of recipes">
-    <a [routerLink]="['/recipes', recipe.id]">
-      <strong>{{ recipe.title }}</strong>
-    </a>
-    — {{ recipe.category }}
-  </li>
-</ul>
+<div class="list">
+  <h2>Recipes</h2>
+
+  <ng-container *ngIf="recipes$ | async as recipes; else empty">
+    <div *ngFor="let r of recipes" class="recipe-card">
+      <div class="header">
+        <h3>{{ r.name }}</h3>
+        <span class="cat">{{ r.category }}</span>
+      </div>
+
+      <div class="meta">
+        <span *ngIf="r.isFavorite">⭐ Favorite</span>
+        <span *ngIf="!r.isFavorite">☆</span>
+      </div>
+
+      <div class="actions">
+        <button (click)="onToggleFavorite(r.id)">
+          {{ r.isFavorite ? 'Убрати з улюблених' : 'Додати в улюблені' }}
+        </button>
+        <button (click)="onDelete(r.id)">Видалити</button>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-template #empty>
+    <p>Поки немає рецептів.</p>
+  </ng-template>
+</div>

@@ -1,23 +1,27 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router'; 
-import { RecipeService, Recipe } from '../../services/recipe.service';
+import { Observable } from 'rxjs';
+import { Recipe } from '../../models/recipe.model';
+import { RecipeService } from '../../services/recipe.service';
 
 @Component({
   selector: 'app-recipe-list',
-  standalone: true,
   templateUrl: './recipe-list.component.html',
   styleUrls: ['./recipe-list.component.css'],
-  imports: [CommonModule, RouterModule] 
 })
 export class RecipeListComponent implements OnInit {
-  recipes: Recipe[] = [];
+  recipes$!: Observable<Recipe[]>;
 
   constructor(private recipeService: RecipeService) {}
 
   ngOnInit(): void {
-    this.recipeService.getRecipes().subscribe((data) => {
-      this.recipes = data;
-    });
+    this.recipes$ = this.recipeService.recipes$;
+  }
+
+  onToggleFavorite(id: string): void {
+    this.recipeService.toggleFavorite(id);
+  }
+
+  onDelete(id: string): void {
+    this.recipeService.delete(id);
   }
 }
