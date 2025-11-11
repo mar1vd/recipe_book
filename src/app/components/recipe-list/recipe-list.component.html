@@ -4,7 +4,9 @@
   <ng-container *ngIf="recipes$ | async as recipes; else empty">
     <div *ngFor="let r of recipes" class="recipe-card">
       <div class="header">
-        <h3>{{ r.name }}</h3>
+        <h3>
+          <a [routerLink]="['/recipes', r.id]" class="name-link">{{ r.name }}</a>
+        </h3>
         <span class="cat">{{ r.category }}</span>
       </div>
 

@@ -1,4 +1,6 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Recipe } from '../../models/recipe.model';
 import { RecipeService } from '../../services/recipe.service';
@@ -7,6 +9,8 @@ import { RecipeService } from '../../services/recipe.service';
   selector: 'app-recipe-list',
   templateUrl: './recipe-list.component.html',
   styleUrls: ['./recipe-list.component.css'],
+  standalone: true,
+  imports: [CommonModule, RouterModule],
 })
 export class RecipeListComponent implements OnInit {
   recipes$!: Observable<Recipe[]>;
