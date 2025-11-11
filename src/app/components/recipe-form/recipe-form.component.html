@@ -1,0 +1,49 @@
+<div class="form-container">
+  <h2>{{ isEditMode ? 'Edit Recipe' : 'Add Recipe' }}</h2>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <label>
+      Name:
+      <input type="text" formControlName="name" />
+    </label>
+
+    <label>
+      Category:
+      <select formControlName="category">
+        <option *ngFor="let cat of categories" [value]="cat">{{ cat }}</option>
+      </select>
+    </label>
+
+    <label class="fav">
+      <input type="checkbox" formControlName="isFavorite" /> Mark as favorite
+    </label>
+
+    <h3>Ingredients</h3>
+    <div formArrayName="ingredients">
+      <div
+        *ngFor="let ing of ingredients.controls; let i = index"
+        [formGroupName]="i"
+        class="ing-row"
+      >
+        <input placeholder="Name" formControlName="name" />
+        <input placeholder="Amount (optional)" formControlName="amount" />
+        <button type="button" (click)="removeIngredient(i)">✖</button>
+      </div>
+      <button type="button" (click)="addIngredient()">+ Add Ingredient</button>
+    </div>
+
+    <h3>Steps</h3>
+    <div formArrayName="steps">
+      <div *ngFor="let step of steps.controls; let i = index" class="step-row">
+        <textarea rows="2" [formControlName]="i" placeholder="Describe step..."></textarea>
+        <button type="button" (click)="removeStep(i)">✖</button>
+      </div>
+      <button type="button" (click)="addStep()">+ Add Step</button>
+    </div>
+
+    <div class="actions">
+      <button type="submit" [disabled]="form.invalid">{{ isEditMode ? 'Update' : 'Save' }}</button>
+      <button type="button" (click)="onCancel()">Cancel</button>
+    </div>
+  </form>
+</div>

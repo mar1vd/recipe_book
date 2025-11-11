@@ -90,3 +90,23 @@ button.delete {
   text-align: center;
   color: #6b7280;
 }
+.top-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.add-btn {
+  background: #22c55e;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+}
+.edit-btn {
+  background: #f59e0b;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+}

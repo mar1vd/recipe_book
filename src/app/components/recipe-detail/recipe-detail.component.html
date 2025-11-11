@@ -15,8 +15,13 @@
   </ol>
 
   <p *ngIf="recipe.isFavorite" class="fav">⭐ This is one of your favorites!</p>
+
+  <div class="buttons">
+    <button (click)="onBack()">← Back</button>
+    <button (click)="onEdit()">✏️ Edit</button>
+  </div>
 </div>
 
 <ng-template #notFound>
-  <p>Рецепт не знайдено 😔</p>
+  <p>Recipe not found 😔</p>
 </ng-template>

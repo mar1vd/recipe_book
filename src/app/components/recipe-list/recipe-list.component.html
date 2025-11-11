@@ -1,7 +1,8 @@
 <div class="recipes-container">
-  <h2>Recipes</h2>
+  <div class="top-actions">
+    <a routerLink="/add" class="add-btn">+ Add Recipe</a>
+  </div>
 
-  <!-- Панель пошуку та фільтра -->
   <div class="filters">
     <input
       type="text"
@@ -16,7 +17,6 @@
     </select>
   </div>
 
-  <!-- Список рецептів -->
   <div *ngIf="filtered.length > 0; else empty" class="recipe-list">
     <div *ngFor="let r of filtered" class="recipe-card">
       <div class="header">
@@ -32,6 +32,7 @@
       </div>
 
       <div class="actions">
+        <a [routerLink]="['/edit', r.id]" class="edit-btn">✏️ Edit</a>
         <button (click)="onToggleFavorite(r.id)">
           {{ r.isFavorite ? '💔 Remove from favorites' : '❤️ Add to favorites' }}
         </button>
