@@ -1,1 +1,74 @@
-/* You can add global styles to this file, and also import other style files */
+
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1e40af;
+  --danger: #ef4444;
+  --success: #22c55e;
+  --gray: #6b7280;
+  --bg: #f9fafb;
+  --radius: 8px;
+}
+
+html, body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: #111827;
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  margin-top: 0;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+  transition: color 0.2s;
+}
+a:hover {
+  color: var(--primary-dark);
+}
+
+/* layout containers */
+.container {
+  width: min(100% - 32px, 900px);
+  margin-inline: auto;
+  padding-block: 24px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin-block: 12px;
+}
+@media (max-width: 640px) {
+  .nav-inner {
+    flex-direction: column;
+    gap: 8px;
+    height: auto;
+    padding-block: 8px;
+  }
+
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .recipe-card {
+    padding: 10px;
+  }
+
+  .form-container {
+    padding: 12px;
+  }
+
+  button, .add-btn, .edit-btn {
+    font-size: 13px;
+  }
+}

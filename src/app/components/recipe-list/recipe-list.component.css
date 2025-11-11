@@ -110,3 +110,10 @@ button.delete {
   border-radius: 4px;
   text-decoration: none;
 }
+.recipe-card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.recipe-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
