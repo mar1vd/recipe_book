@@ -1,8 +1,24 @@
-<div class="list">
+<div class="recipes-container">
   <h2>Recipes</h2>
 
-  <ng-container *ngIf="recipes$ | async as recipes; else empty">
-    <div *ngFor="let r of recipes" class="recipe-card">
+  <!-- Панель пошуку та фільтра -->
+  <div class="filters">
+    <input
+      type="text"
+      placeholder="🔍 Search recipes..."
+      [(ngModel)]="searchValue"
+      (input)="onSearchChange(searchValue)"
+    />
+
+    <select [(ngModel)]="selectedCategory" (change)="onCategoryChange(selectedCategory)">
+      <option value="All">All Categories</option>
+      <option *ngFor="let cat of categories" [value]="cat">{{ cat }}</option>
+    </select>
+  </div>
+
+  <!-- Список рецептів -->
+  <div *ngIf="filtered.length > 0; else empty" class="recipe-list">
+    <div *ngFor="let r of filtered" class="recipe-card">
       <div class="header">
         <h3>
           <a [routerLink]="['/recipes', r.id]" class="name-link">{{ r.name }}</a>
@@ -17,14 +33,14 @@
 
       <div class="actions">
         <button (click)="onToggleFavorite(r.id)">
-          {{ r.isFavorite ? 'Убрати з улюблених' : 'Додати в улюблені' }}
+          {{ r.isFavorite ? '💔 Remove from favorites' : '❤️ Add to favorites' }}
         </button>
-        <button (click)="onDelete(r.id)">Видалити</button>
+        <button class="delete" (click)="onDelete(r.id)">🗑 Delete</button>
       </div>
     </div>
-  </ng-container>
+  </div>
 
   <ng-template #empty>
-    <p>Поки немає рецептів.</p>
+    <p class="empty">No recipes found 😔</p>
   </ng-template>
 </div>
