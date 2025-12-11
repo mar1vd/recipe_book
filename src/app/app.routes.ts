@@ -3,6 +3,7 @@ import { RecipeDetailComponent } from './components/recipe-detail/recipe-detail.
 import { RecipeFormComponent } from './components/recipe-form/recipe-form.component';
 import { RecipeListComponent } from './components/recipe-list/recipe-list.component';
 import { HomeComponent } from './pages/home/home.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -10,5 +11,5 @@ export const routes: Routes = [
   { path: 'recipes/:id', component: RecipeDetailComponent },
   { path: 'add', component: RecipeFormComponent },
   { path: 'edit/:id', component: RecipeFormComponent },
-  { path: '**', redirectTo: '' },
+  { path: '**', component: PageNotFoundComponent },
 ];
