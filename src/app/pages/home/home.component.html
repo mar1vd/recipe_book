@@ -1,6 +1,36 @@
-<div class="home">
-  <h1>Recipe Book</h1>
-  <p>Welcome to the Recipe Book! Here you can browse, create, and manage your favorite recipes.</p>
+<div class="home-container">
+  
+  <section class="hero">
+    <h1>Welcome to <span class="brand">RecipeBook</span> 🍳</h1>
+    <p class="subtitle">Discover, create, and organize your favorite culinary masterpieces.</p>
+    
+    <div class="stats-badge" *ngIf="totalRecipes > 0">
+      Already <strong>{{ totalRecipes }}</strong> recipes in our collection!
+    </div>
 
-  <a routerLink="/recipes" class="go-btn">Browse Recipes</a>
+    <a routerLink="/recipes" class="cta-btn">Browse All Recipes</a>
+  </section>
+
+  <section class="featured" *ngIf="featuredRecipe">
+    <h2>✨ Recipe of the Day</h2>
+    
+    <div class="featured-card">
+      <div class="card-image">
+        <img 
+          [src]="featuredRecipe.imageUrl || 'https://placehold.co/600x400?text=No+Image'" 
+          [alt]="featuredRecipe.name">
+      </div>
+      
+      <div class="card-content">
+        <span class="category">{{ featuredRecipe.category }}</span>
+        <h3>{{ featuredRecipe.name }}</h3>
+        <p>A delicious choice for today! Check out the ingredients and start cooking.</p>
+        
+        <a [routerLink]="['/recipes', featuredRecipe.id]" class="view-btn">
+          View Recipe →
+        </a>
+      </div>
+    </div>
+  </section>
+
 </div>
