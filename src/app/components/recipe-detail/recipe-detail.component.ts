@@ -12,7 +12,7 @@ import { RecipeService } from '../../services/recipe.service';
   styleUrls: ['./recipe-detail.component.css'],
 })
 export class RecipeDetailComponent implements OnInit {
-  recipe: Recipe | null = null;
+  recipe: Recipe | undefined;
 
   constructor(
     private route: ActivatedRoute,
@@ -22,10 +22,9 @@ export class RecipeDetailComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
-    if (!id) return;
-
-    const all = this.recipeService.getAll();
-    this.recipe = all.find((r) => r.id === id) || null;
+    if (id) {
+      this.recipe = this.recipeService.getById(id);
+    }
   }
 
   onBack(): void {
@@ -35,6 +34,13 @@ export class RecipeDetailComponent implements OnInit {
   onEdit(): void {
     if (this.recipe) {
       this.router.navigate(['/edit', this.recipe.id]);
+    }
+  }
+
+  onDelete(): void {
+    if (this.recipe && confirm('Are you sure you want to delete this recipe?')) {
+      this.recipeService.delete(this.recipe.id);
+      this.router.navigate(['/recipes']);
     }
   }
 }

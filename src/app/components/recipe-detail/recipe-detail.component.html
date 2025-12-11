@@ -1,27 +1,52 @@
-<div *ngIf="recipe; else notFound" class="detail">
-  <h2>{{ recipe.name }}</h2>
-  <p><strong>Category:</strong> {{ recipe.category }}</p>
+<div class="detail-container" *ngIf="recipe; else notFound">
+  <button class="back-btn" (click)="onBack()">← Back to List</button>
 
-  <h3>Ingredients</h3>
-  <ul>
-    <li *ngFor="let ing of recipe.ingredients">
-      {{ ing.name }}<span *ngIf="ing.amount"> — {{ ing.amount }}</span>
-    </li>
-  </ul>
+  <div class="hero">
+    <img
+      [src]="recipe.imageUrl || 'https://placehold.co/600x400?text=No+Image'"
+      [alt]="recipe.name"
+      class="hero-img"
+    />
+    <div class="hero-content">
+      <span class="category-badge">{{ recipe.category }}</span>
+      <h1>
+        {{ recipe.name }}
+        <span *ngIf="recipe.isFavorite" title="Favorite">⭐</span>
+      </h1>
+      
+      <div class="actions">
+        <button class="btn-edit" (click)="onEdit()">✏️ Edit</button>
+        <button class="btn-delete" (click)="onDelete()">🗑 Delete</button>
+      </div>
+    </div>
+  </div>
 
-  <h3>Steps</h3>
-  <ol>
-    <li *ngFor="let step of recipe.steps">{{ step }}</li>
-  </ol>
+  <div class="content-grid">
+    <div class="ingredients-section">
+      <h3>🛒 Ingredients</h3>
+      <ul class="ingredients-list">
+        <li *ngFor="let item of recipe.ingredients">
+          <span class="name">{{ item.name }}</span>
+          <span class="amount" *ngIf="item.amount">{{ item.amount }}</span>
+        </li>
+      </ul>
+    </div>
 
-  <p *ngIf="recipe.isFavorite" class="fav">⭐ This is one of your favorites!</p>
-
-  <div class="buttons">
-    <button (click)="onBack()">← Back</button>
-    <button (click)="onEdit()">✏️ Edit</button>
+    <div class="steps-section">
+      <h3>👨‍🍳 Instructions</h3>
+      <div class="steps-list">
+        <div class="step-item" *ngFor="let step of recipe.steps; let i = index">
+          <div class="step-number">{{ i + 1 }}</div>
+          <p class="step-text">{{ step }}</p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
 <ng-template #notFound>
-  <p>Recipe not found 😔</p>
+  <div class="not-found">
+    <h2>Recipe not found 😕</h2>
+    <button class="back-btn" (click)="onBack()">Go Back</button>
+  </div>
 </ng-template>
