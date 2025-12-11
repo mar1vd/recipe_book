@@ -41,6 +41,7 @@ export class RecipeFormComponent implements OnInit {
   initForm(): void {
     this.form = this.fb.group({
       name: ['', Validators.required],
+      imageUrl: [''], 
       category: [RecipeCategory.Breakfast, Validators.required],
       ingredients: this.fb.array([this.createIngredientGroup()]),
       steps: this.fb.array([this.fb.control('', Validators.required)]),
@@ -58,6 +59,7 @@ export class RecipeFormComponent implements OnInit {
   patchForm(recipe: Recipe): void {
     this.form.patchValue({
       name: recipe.name,
+      imageUrl: recipe.imageUrl, 
       category: recipe.category,
       isFavorite: recipe.isFavorite,
     });

@@ -19,6 +19,15 @@
 
   <div *ngIf="filtered.length > 0; else empty" class="recipe-list">
     <div *ngFor="let r of filtered" class="recipe-card">
+      
+      <div class="card-image" style="width: 100%; height: 180px; overflow: hidden; border-radius: 8px 8px 0 0; margin-bottom: 10px;">
+         <img 
+            [src]="r.imageUrl || 'https://placehold.co/600x400?text=No+Image'" 
+            [alt]="r.name" 
+            style="width: 100%; height: 100%; object-fit: cover;"
+         >
+      </div>
+
       <div class="header">
         <h3>
           <a [routerLink]="['/recipes', r.id]" class="name-link">{{ r.name }}</a>
@@ -34,7 +43,7 @@
       <div class="actions">
         <a [routerLink]="['/edit', r.id]" class="edit-btn">✏️ Edit</a>
         <button (click)="onToggleFavorite(r.id)">
-          {{ r.isFavorite ? '💔 Remove from favorites' : '❤️ Add to favorites' }}
+          {{ r.isFavorite ? '💔 Remove' : '❤️ Favorite' }}
         </button>
         <button class="delete" (click)="onDelete(r.id)">🗑 Delete</button>
       </div>

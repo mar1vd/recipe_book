@@ -67,8 +67,11 @@ export class RecipeListComponent implements OnInit {
   }
 
   onDelete(id: string): void {
-    this.recipeService.delete(id);
-    this.recipes = this.recipeService.getAll();
-    this.search$.next(this.searchValue);
+
+    if (confirm('Are you sure you want to delete this recipe?')) {
+        this.recipeService.delete(id);
+        this.recipes = this.recipeService.getAll();
+        this.search$.next(this.searchValue);
+    }
   }
 }

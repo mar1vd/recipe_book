@@ -8,6 +8,15 @@
     </label>
 
     <label>
+      Image URL:
+      <input type="text" formControlName="imageUrl" placeholder="https://example.com/image.jpg" />
+    </label>
+
+    <div *ngIf="form.get('imageUrl')?.value" style="margin-bottom: 15px; text-align: center;">
+      <img [src]="form.get('imageUrl')?.value" alt="Preview" style="max-height: 200px; max-width: 100%; border-radius: 8px;">
+    </div>
+
+    <label>
       Category:
       <select formControlName="category">
         <option *ngFor="let cat of categories" [value]="cat">{{ cat }}</option>
