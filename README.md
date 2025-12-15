@@ -150,8 +150,9 @@ recipe_book/
        └─ services/           # Injectable services
           ├─ recipe.service.ts
           └─ recipe.spec.ts
+```
 ---
-##🚀 Getting Started / Як запустити
+## 🚀 Getting Started / Як запустити
 
 1️⃣ Clone the repository / Склонуйте репозиторій
 
@@ -170,6 +171,8 @@ npm start
 
 Navigate to: http://localhost:4200/
 
+---
+
 ## 👨‍💻 Authors / Автори
 
 - **Ivan Tymchuk** — Implementation, UI/UX , Application Logic 
@@ -177,5 +180,5 @@ Navigate to: http://localhost:4200/
 
 - **Denys Morys** — Architecture, Application Logic  , UI/UX 
   GitHub: https://github.com/mar1vd
-
+---
 
