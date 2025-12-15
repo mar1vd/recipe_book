@@ -19,7 +19,7 @@
     </a>
   </p>
 
-  <img src="https://images.unsplash.com/photo-1556910103-1c02745a30bf?auto=format&fit=crop&w=1200&q=80" alt="Recipe Book Banner" width="100%" style="border-radius: 10px;" />
+  <img src="https://github.com/user-attachments/assets/9074c06a-52df-4501-8b57-62431b76ff24" alt="Recipe Book Banner" width="100%" style="border-radius: 10px;" />
 
 </div>
 
@@ -54,11 +54,11 @@
 
 | Home Page | Recipe List |
 | :---: | :---: |
-| <img src="https://placehold.co/600x400?text=Home+Page+Screenshot" alt="Home Page" width="100%"> | <img src="https://placehold.co/600x400?text=Recipe+List+Screenshot" alt="Recipe List" width="100%"> |
+| <img src="https://github.com/user-attachments/assets/d2fa7df4-2295-4a2b-a57d-cdc2e8ebb020" alt="Home Page" width="100%"> | <img src="https://github.com/user-attachments/assets/479cbf8b-4c9c-470c-b9de-699509fbf026" alt="Recipe List" width="100%"> |
 
 | Recipe Details | Edit Form |
 | :---: | :---: |
-| <img src="https://placehold.co/600x400?text=Details+Screenshot" alt="Details" width="100%"> | <img src="https://placehold.co/600x400?text=Form+Screenshot" alt="Form" width="100%"> |
+| <img src="https://github.com/user-attachments/assets/943d6714-d37d-44da-ae8a-930d4f13c992" alt="Details" width="100%"> | <img src="https://github.com/user-attachments/assets/c9bb8e59-2c08-4653-a46f-e204f1f9a845" alt="Form" width="100%"> |
 
 ---
 
@@ -151,7 +151,7 @@ recipe_book/
           ├─ recipe.service.ts
           └─ recipe.spec.ts
 ---
-🚀 Getting Started / Як запустити
+##🚀 Getting Started / Як запустити
 
 1️⃣ Clone the repository / Склонуйте репозиторій
 
@@ -170,16 +170,12 @@ npm start
 
 Navigate to: http://localhost:4200/
 
-👨‍💻 Authors / Автори
+## 👨‍💻 Authors / Автори
 
-Name
+- **Ivan Tymchuk** — Implementation, UI/UX , Application Logic 
+  GitHub: https://github.com/SoldierrBoy
 
-Responsibility
+- **Denys Morys** — Architecture, Application Logic  , UI/UX 
+  GitHub: https://github.com/mar1vd
 
-Ivan Tymchuk
 
-Implementation, UI/UX
-
-Denys Morys
-
-Architecture, Logic
