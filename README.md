@@ -151,18 +151,35 @@ recipe_book/
           ├─ recipe.service.ts
           └─ recipe.spec.ts
 ---
+🚀 Getting Started / Як запустити
 
-## 🚀 Getting Started / Як запустити
+1️⃣ Clone the repository / Склонуйте репозиторій
 
-Follow these steps to set up the project locally.
-Виконайте ці кроки для локального запуску проєкту.
+git clone https://github.com/mar1vd/recipe_book.git
+cd recipe_book
 
-### 1. Clone the repository / Склонуйте репозиторій:
-```bash
-git clone [https://github.com/mar1vd/recipe_book.git](https://github.com/mar1vd/recipe_book.git)
+2️⃣ Install dependencies / Встановіть залежності
 
-###2. Install dependencies / Встановіть залежності:Bashnpm install
-###3. Run the application / Запустіть додаток:Bashnpm start
-###4. Open in browser / Відкрийте у браузері:Navigate to / Перейдіть за посиланням:Plaintexthttp://localhost:4200/
-👨‍💻 Authors / АвториProject created as part of the Front-End Web Programming (Angular) course.Проєкт створено в межах дисципліни "Веб-програмування Front-End (Angular)".<div align="center">Ivan TymchukDenys MorysImplementation & UI/UXArchitecture & LogicGitHub ProfileGitHub Profile</div><div align="center"><sub>Built with ❤️ and lots of coffee ☕</sub></div>
-```
+npm install
+
+3️⃣ Run the application / Запустіть додаток
+
+npm start
+
+4️⃣ Open in browser / Відкрийте у браузері
+
+Navigate to: http://localhost:4200/
+
+👨‍💻 Authors / Автори
+
+Name
+
+Responsibility
+
+Ivan Tymchuk
+
+Implementation, UI/UX
+
+Denys Morys
+
+Architecture, Logic
